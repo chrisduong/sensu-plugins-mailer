@@ -1,0 +1,9 @@
+{
+  "mailer": {
+    "admin_gui": "localhost:3000",
+    "mail_from": "sensu@example.com",
+    "mail_to": "abc@example.com",
+    "smtp_address": "localhost",
+    "smtp_port": 25
+  }
+}
