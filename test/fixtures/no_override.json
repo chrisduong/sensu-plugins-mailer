@@ -1,0 +1,32 @@
+{
+  "occurrences": 1,
+  "action": "create",
+  "client": {
+    "name": "host01",
+    "address": "10.2.1.11",
+    "subscriptions": [
+      "all",
+      "frontend",
+      "apache"
+    ],
+    "timestamp": 1326390159
+  },
+  "check": {
+    "name": "frontend_http_check",
+    "issued": 1326390169,
+    "output": "HTTP CRITICAL: HTTP/1.1 503 Service Temporarily Unavailable - pattern not found - 593 bytes in 0.001 second response time |time=0.000500s;;;0.000000 size=593B;;;0\n",
+    "status": 2,
+    "notification": "Frontend HTTP failed",
+    "command": "PATH=$PATH:/usr/lib64/nagios/plugins:/usr/lib/nagios/plugins  check_http -I 127.0.0.1 -u http://web.example.com/healthcheck.html -R 'pageok'",
+    "subscribers": [
+      "frontend"
+    ],
+    "interval": 60,
+    "handlers": "mailer",
+    "history": [
+      "0",
+      "2"
+    ],
+    "flapping": false
+  }
+}
